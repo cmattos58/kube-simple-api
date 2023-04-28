@@ -7,7 +7,7 @@ metadata:
           #    nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
   rules:
-  - host: srv02.tce.ma.gov.br
+  - host: simpleapi.srv02.tce.ma.gov.br
     http:
       paths:
         - path: /
