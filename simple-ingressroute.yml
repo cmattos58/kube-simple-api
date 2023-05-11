@@ -1,0 +1,13 @@
+apiVersion: traefik.containo.us/v1alpha1
+kind: IngressRoute
+metadata:
+  name: ingressroute
+spec:
+  entryPoints:
+    - web
+  routes:
+  - match: Host(`srv02.tce.ma.gov.br`)
+    kind: Rule
+    services:
+    - name: simple-api
+      port: 3000
