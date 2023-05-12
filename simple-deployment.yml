@@ -5,7 +5,7 @@ metadata:
   labels:
     app: simple-api
 spec:
-  replicas: 5
+  replicas: 2
   selector:
     matchLabels:
       app: simple-api
@@ -16,13 +16,14 @@ spec:
     spec:
       containers:
       - name: simple-api
-        image: gustavoleitao/simple-api:1.0.0
+        # image: gustavoleitao/simple-api:1.0.0
+        image: cmattos58/fedora36-php_apache:v3
         ports:
-        - containerPort: 3000
-        readinessProbe:
-          httpGet:
-            path: /
-            port: 3000
+        - containerPort: 80
+        # readinessProbe:
+        #   httpGet:
+        #     path: /
+        #     port: 3000
 
 
 

@@ -6,7 +6,7 @@ spec:
   entryPoints:
     - web
   routes:
-  - match: Host(`srv02.tce.ma.gov.br`)
+  - match: Host(`ead.srv02.tce.ma.gov.br`) && Headers (`Userkey`, `teste`)
     kind: Rule
     services:
     - name: simple-api
